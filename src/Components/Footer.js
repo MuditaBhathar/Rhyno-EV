@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section logo-section">
           <div className="logo-container">
-            <img src="Images\Rhyno Logo .png" alt="Rhyno EV Logo" className="logo" />
+            <img src="\Images\Rhyno Logo .png" alt="Rhyno EV Logo" className="logo" />
             <span>RHYNO EV</span>
           </div>
         </div>

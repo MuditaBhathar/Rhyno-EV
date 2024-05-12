@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navbar-left">
           <Link to="/" className="navbar-logo">
-            <img src="Images\Rhyno Logo .png" alt="Rhyno EV Logo" />
+            <img src="\Images\Rhyno Logo .png" alt="Rhyno EV Logo" />
           </Link>
         </div>
         <div className={`navbar-right ${isMenuOpen ? 'active' : ''}`}>
