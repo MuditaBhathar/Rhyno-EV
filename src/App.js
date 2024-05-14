@@ -9,6 +9,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Rentals from './Components/Rentals';
 import Prebook from './Components/Prebook';
+import Products from './Components/Products';
 import Product1 from './Components/Products/Product1';
 import Product3 from './Components/Products/Product3';
 import Product2 from './Components/Products/Product2';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/rentals" element={<Rentals />} />
         <Route path="/prebook" element={<Prebook />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/products/product1" element={<Product1 />} />
         <Route path="/products/product3" element={<Product3 />} />
         <Route path="/products/product2" element={<Product2 />} />

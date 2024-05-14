@@ -140,69 +140,73 @@ body {
   }
 } */
 
-
-.whole{
-  background-color: white;
-}
-body{
+body {
   background-color: white;
   margin: 0;
 }
+
+.whole {
+  background-color: white;
+}
+
 .comparison-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
- 
-  }
-  .vehicle-comparison {
-    background-color:white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    margin-right: 20px; 
-  }
-  
-  .spec-item {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 300;
-    font-family: 'poppins', sans-serif;
-    background-color: white;
-    font-size: 20px;
-    margin-bottom: 10px; /* Add margin between each specification item */
-  }
-  
-  .spec-label {
-    font-weight: bold;
-    font-family: 'poppins', sans-serif;
-    font-size: 20px;
-    background-color: white;
-  }
-  
-  .spec-value {
-    margin-left: 10px; /* Adjust spacing between key and value */
-    background-color: white;
-  }
-  
-  .comparison-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    font-weight: 300;
-    background-color: white;
-    font-family: 'poppins', sans-serif;
-    font-size: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.vehicle-comparison {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  width: calc(33.333% - 40px); /* Ensure three boxes fit in one row with margins */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.spec-label {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  background-color: white;
+}
+
+.spec-value {
+  margin-left: 10px;
+  background-color: white;
+}
+
+.comparison-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to next line if necessary */
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: 300;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
 
 @keyframes oscillate {
   0% {
-    transform: translateX(0); 
+    transform: translateX(0);
   }
   50% {
-    transform: translateX(-5px); 
+    transform: translateX(-5px);
   }
   100% {
     transform: translateX(0);
@@ -214,30 +218,80 @@ body{
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
-  background:white;
-  overflow-x: auto; 
+  background: white;
+  overflow-x: auto;
   padding-bottom: 10px;
 }
 
 .image-slideshow img {
-  width: 340px; 
+  width: 340px;
   height: auto;
   border-radius: 8px;
-  animation: oscillate 2s ease infinite; 
+  animation: oscillate 2s ease infinite;
 }
+
 .image-slideshow img:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
-  animation: oscillate 2s ease- infinite; 
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: oscillate 2s ease infinite;
 }
+
+@media (max-width: 1024px) {
+  .comparison-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .vehicle-comparison {
+    margin: 20px 0;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 600px;
+  }
+
+  .image-slideshow {
+    justify-content: center;
+  }
+
+  .image-slideshow img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-page {
+    padding: 10px;
+  }
+
+  .vehicle-comparison {
+    padding: 15px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .spec-item {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .image-slideshow {
+    max-width: 100%;
+  }
+
+  .image-slideshow img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .comparison-page {
     padding: 5px;
   }
 
   .vehicle-comparison {
-    /* margin-bottom: 20px; */
-    padding: 10px; 
+    padding: 10px;
     max-width: 300px;
   }
 
@@ -245,11 +299,6 @@ body{
     font-size: 14px;
     margin-bottom: 6px;
   }
-
-  /* .image-slideshow {
-    justify-content: flex-start;
-    overflow-x: auto;
-  } */
 
   .image-slideshow img {
     width: 80px;
